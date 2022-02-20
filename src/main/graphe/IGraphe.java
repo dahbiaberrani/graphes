@@ -10,5 +10,6 @@ public interface IGraphe {
     void detruireArc(Sommet sommetDepart, Sommet sommetdestination);
     Set<Arc> getArcsIncidents(Sommet sommet);
     Set<Sommet> getSommetsVoisins(Sommet sommet);
-    boolean rechercherChemin(Sommet sommetDepart , Sommet sommetDestination);
+    Set<Arc> rechercherChemin(Sommet sommetDepart , Sommet sommetDestination);
+    boolean estConnexe();
 }

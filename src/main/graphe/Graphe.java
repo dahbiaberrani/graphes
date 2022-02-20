@@ -20,8 +20,11 @@ public class Graphe implements IGraphe{
 
     @Override
     public void supprimerSommet(Sommet sommet) {
+        //Suppressions des arcs incidents et partants de ce sommet
+        detruireArcsSortantsEtArrivants(sommet);
+        //Suppression du sommet
         ensembleSommets.remove(sommet);
-        //TODO detruireArcsSortantsEtArrivants(sommet);
+
     }
 
     @Override
@@ -46,20 +49,36 @@ public class Graphe implements IGraphe{
         return arcsIncidents;
     }
 
-    public boolean rechercherChemin(Sommet sommetDepart , Sommet sommetDestination) {
-        if (sommetDepart.equals(sommetDestination)) {
-
-            return true;
+    public Set<Arc> rechercherChemin(Sommet sommetDepart , Sommet sommetDestination) {
+        Set<Arc> chemin = new HashSet<>();
+        Arc arc = new Arc(sommetDepart, sommetDestination);
+        if (this.ensembleArcs.contains(arc)) {
+            chemin.add(arc);
+            return chemin;
         }
         for (Sommet sommet : getSommetsVoisins(sommetDepart)) {
-            if(sommetDepart.equals(sommetDestination)) {
-                return true;
-            }
-            if(rechercherChemin(sommet, sommetDestination)) {
-                return true;
+            Set<Arc> cheminPartiel = rechercherChemin(sommet, sommetDestination);
+            if(!cheminPartiel.isEmpty()) {
+                chemin.add(new Arc(sommetDepart, sommet));
+                chemin.addAll(cheminPartiel);
+                return chemin;
             }
         }
-        return false;
+        return chemin;
+    }
+
+    @Override
+    public boolean estConnexe() {
+        for(Sommet sommet1 : this.ensembleSommets) {
+            for(Sommet sommet2: this.ensembleSommets) {
+                if (!sommet1.equals(sommet2)) {
+                    if (rechercherChemin(sommet1,sommet2).isEmpty()) {
+                        return false;
+                    }
+                }
+            }
+        }
+        return true;
     }
 
     @Override
@@ -79,26 +98,23 @@ public class Graphe implements IGraphe{
         ensembleArcs.remove(arc);
     }
 
-//    private void detruireArcsSortants(int numSommetDepart) {
-//        for(int i = 0; i < NOMBRE_MAX_SOMMETS; i++) {
-//            detruireArc(numSommetDepart,i);
-//        }
-//    }
-//
-//    private void detruireArcsArrivants(int numSommetDestination) {
-//        for(int i = 0; i < NOMBRE_MAX_SOMMETS; i++) {
-//            detruireArc(i, numSommetDestination);
-//        }
-//    }
-//
-//    private void detruireArcsSortantsEtArrivants(int numSommet) {
-//        detruireArcsSortants(numSommet);
-//        detruireArcsArrivants(numSommet);
-//    }
+
+    private void detruireArcsSortantsEtArrivants(Sommet sommet) {
+        HashSet<Arc> arcASupprimer = new HashSet<>();
+        for(Arc arc : this.ensembleArcs) {
+            if(arc.getSommetDestination().equals(sommet) || arc.getSommetDepart().equals(sommet)) {
+                arcASupprimer.add(arc);
+            }
+        }
+
+        for(Arc arc : arcASupprimer) {
+            this.ensembleArcs.remove(arc);
+        }
+    }
 
     @Override
     public String toString() {
-        return this.ensembleSommets + "\n" + this.ensembleArcs;
+        return "Sommets: " + this.ensembleSommets + "\n" + "Arcs: " + this.ensembleArcs;
     }
 
 }
