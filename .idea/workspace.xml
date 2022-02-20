@@ -7,11 +7,7 @@
     <list default="true" id="8d05b948-7ab5-4886-9e11-be07319ec485" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/graphes/graphe/Graphe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/graphes/graphe/Graphe.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/graphes/graphe/IGraphe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/graphes/graphe/IGraphe.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/graphes/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/graphes/main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/graphe/Graphe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/graphe/Graphe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/graphe/IGraphe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/graphe/IGraphe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -63,15 +59,16 @@
       <recent name="graphe" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.main">
-    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main" />
+  <component name="RunManager" selected="JUnit.All in graphes">
+    <configuration name="All in graphes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="graphes" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ArcTest.getSommetDepart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GrapheTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="graphes" />
       <extension name="coverage">
         <pattern>
@@ -80,14 +77,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="graphe" />
-      <option name="MAIN_CLASS_NAME" value="graphe.ArcTest" />
-      <option name="METHOD_NAME" value="getSommetDepart" />
+      <option name="MAIN_CLASS_NAME" value="graphe.GrapheTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GrapheTest.estConnexe" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="graphes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="graphe.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="graphe" />
+      <option name="MAIN_CLASS_NAME" value="graphe.GrapheTest" />
+      <option name="METHOD_NAME" value="estConnexe" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ArcTest.getSommetDestination" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GrapheTest.getArcsIncidents" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="graphes" />
       <extension name="coverage">
         <pattern>
@@ -96,14 +108,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="graphe" />
-      <option name="MAIN_CLASS_NAME" value="graphe.ArcTest" />
-      <option name="METHOD_NAME" value="getSommetDestination" />
+      <option name="MAIN_CLASS_NAME" value="graphe.GrapheTest" />
+      <option name="METHOD_NAME" value="getArcsIncidents" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SommetTest.getNom" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GrapheTest.rechercherChemin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="graphes" />
       <extension name="coverage">
         <pattern>
@@ -112,24 +124,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="graphe" />
-      <option name="MAIN_CLASS_NAME" value="graphe.SommetTest" />
-      <option name="METHOD_NAME" value="getNom" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SommetTest.testEquals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="graphes" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="graphe.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="graphe" />
-      <option name="MAIN_CLASS_NAME" value="graphe.SommetTest" />
-      <option name="METHOD_NAME" value="testEquals" />
+      <option name="MAIN_CLASS_NAME" value="graphe.GrapheTest" />
+      <option name="METHOD_NAME" value="rechercherChemin" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -137,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.main" />
-        <item itemvalue="JUnit.ArcTest.getSommetDestination" />
-        <item itemvalue="JUnit.ArcTest.getSommetDepart" />
-        <item itemvalue="JUnit.SommetTest.getNom" />
-        <item itemvalue="JUnit.SommetTest.testEquals" />
+        <item itemvalue="JUnit.All in graphes" />
+        <item itemvalue="JUnit.GrapheTest" />
+        <item itemvalue="JUnit.GrapheTest.estConnexe" />
+        <item itemvalue="JUnit.GrapheTest.rechercherChemin" />
+        <item itemvalue="JUnit.GrapheTest.getArcsIncidents" />
       </list>
     </recent_temporary>
   </component>

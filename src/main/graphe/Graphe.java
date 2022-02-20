@@ -13,6 +13,14 @@ public class Graphe implements IGraphe{
         ensembleArcs = new HashSet<>();
     }
 
+    public Set<Sommet> getEnsembleSommets() {
+        return ensembleSommets;
+    }
+
+    public Set<Arc> getEnsembleArcs() {
+        return ensembleArcs;
+    }
+
     @Override
     public void ajouterSommet(Sommet sommet) {
         ensembleSommets.add(sommet);
