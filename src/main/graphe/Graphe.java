@@ -46,8 +46,24 @@ public class Graphe implements IGraphe{
         return arcsIncidents;
     }
 
+    public boolean rechercherChemin(Sommet sommetDepart , Sommet sommetDestination) {
+        if (sommetDepart.equals(sommetDestination)) {
+
+            return true;
+        }
+        for (Sommet sommet : getSommetsVoisins(sommetDepart)) {
+            if(sommetDepart.equals(sommetDestination)) {
+                return true;
+            }
+            if(rechercherChemin(sommet, sommetDestination)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     @Override
-    public Set<Sommet> getSommetsvoisins(Sommet sommet) {
+    public Set<Sommet> getSommetsVoisins(Sommet sommet) {
         Set<Sommet> sommetsVoisins = new HashSet<>();
 
         for (Arc arc : ensembleArcs) {
@@ -82,7 +98,7 @@ public class Graphe implements IGraphe{
 
     @Override
     public String toString() {
-        return "A faire";
+        return this.ensembleSommets + "\n" + this.ensembleArcs;
     }
 
 }
