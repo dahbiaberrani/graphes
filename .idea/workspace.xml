@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8d05b948-7ab5-4886-9e11-be07319ec485" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/graphes/graphe/Graphe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/graphes/graphe/Graphe.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/graphe/Graphe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/graphe/Graphe.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,5 +149,8 @@
       <updated>1645354760339</updated>
     </task>
     <servers />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/graphes$All_in_graphes.ic" NAME="All in graphes Coverage Results" MODIFIED="1645393464902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
